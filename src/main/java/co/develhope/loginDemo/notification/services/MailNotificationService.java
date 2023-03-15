@@ -15,8 +15,8 @@ public class MailNotificationService {
     public void sendActivationEmail(User user) {
         SimpleMailMessage sms = new SimpleMailMessage();
         sms.setTo(user.getEmail());
-        sms.setFrom("vittoria.vassarotti@proton.me");
-        sms.setReplyTo("vittoria.vassarotti@proton.me");
+        sms.setFrom("email@email.com");
+        sms.setReplyTo("email@email.com");
         sms.setSubject("You have signed up to the platform!");
         sms.setText("The activation code is: " + user.getActivationCode());
         emailSender.send(sms);
@@ -25,8 +25,8 @@ public class MailNotificationService {
     public void sendPasswordResetMail(User user) {
         SimpleMailMessage sms = new SimpleMailMessage();
         sms.setTo(user.getEmail());
-        sms.setFrom("vittoria.vassarotti@proton.me");
-        sms.setReplyTo("vittoria.vassarotti@proton.me");
+        sms.setFrom("email@email.com");
+        sms.setReplyTo("email@email.com");
         sms.setSubject("You have signed up to the platform");
         sms.setText("The activation code is: " + user.getPasswordResetCode());
         emailSender.send(sms);
